@@ -1,0 +1,47 @@
+version: '3'
+
+services:
+  flask-mc:
+    build: .
+    container_name: flask_mc
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./code:/code
+      - ./minecraft-data:/minecraft-data
+    depends_on:
+      - mariadb-mc
+
+  mariadb-mc:
+    image: mariadb:latest
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: secret
+    volumes:
+      - ./data:/var/lib/myslq
+    ports:
+      - "3306:3306"
+
+  minecraft-server:
+    image: itzg/minecraft-server
+    ports:
+      - "25565:25565"
+    environment:
+      EULA: "TRUE"
+      TYPE: "BUKKIT"
+      ENABLE_WHITELIST: "TRUE"
+      ONLINE_MODE: "FALSE"
+    volumes:
+      - ./minecraft-data:/data
+    restart: always
+
+  phpmyadmin-mc:
+    image: phpmyadmin/phpmyadmin:latest
+    container_name: 'Phpmyadmin-mc'
+    depends_on:
+      - mariadb-mc
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOST=mariadb
+    ports:
+      - '8000:80'

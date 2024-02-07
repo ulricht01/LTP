@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/styles.css">
+    <title>Registrace</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Registrace</h2>
+        <form method="post">
+            <label for="uuid">UUID:</label>
+            <input type="text" id="uuid" name="uuid" required>
+
+            <label for="uzivatel">Uživatel:</label>
+            <input type="text" id="uzivatel" name="uzivatel" required>
+
+            <label for="heslo">Heslo:</label>
+            <input type="password" id="heslo" name="heslo" required>
+            {% include 'message.html' %}
+
+            <button type="submit">Registruj</button>
+        </form>
+    </div>
+</body>
+
+</html>

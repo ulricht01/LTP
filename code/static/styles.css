@@ -1,0 +1,105 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    /* Přidáno omezení šířky kontejneru */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 8px;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    /* Přidáno zvětšení velikosti písma */
+}
+
+button {
+    padding: 12px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    /* Přidáno zvětšení velikosti písma */
+}
+
+/* Přidáno pozadí */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(135deg, #4caf50, #2196f3);
+    /* Změňte barvy dle vašeho vkusu */
+}
+
+.mess_success {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: 40px;
+    /* Zvětšeno o něco více */
+    border-radius: 8px;
+    background: #8cff66;
+    /* Jasnější zelená barva */
+    color: #004d00;
+    /* Tmavší zelený text */
+    font-size: 18px;
+    /* Trochu menší font-size */
+    font-weight: bold;
+    /* Tučné písmo pro důraz */
+    border: 2px solid #004d00;
+    /* Tmavší ohraničení */
+    margin-bottom: 10px;
+    /* Malý odstup od ostatních prvků */
+}
+
+.mess_error {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: 40px;
+    /* Zvětšeno o něco více */
+    border-radius: 8px;
+    background: #ff9999;
+    /* Jasnější červená barva */
+    color: #660000;
+    /* Tmavší červený text */
+    font-size: 18px;
+    /* Trochu menší font-size */
+    font-weight: bold;
+    /* Tučné písmo pro důraz */
+    border: 2px solid #660000;
+    /* Tmavší ohraničení */
+    margin-bottom: 10px;
+    /* Malý odstup od ostatních prvků */
+}

@@ -1,4 +1,4 @@
-# DOCKER-COMPOSE.YAML:
+# DOCKER-COMPOSE.YAML
 
 ## FLASK-MC
 Flask využíváme k vytvoření webové aplikace, na které se zaregistrujeme a to nás zaeviduje do "White-Listu"
